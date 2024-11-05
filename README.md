@@ -1,4 +1,4 @@
-![logo](https://github.com/Madhu-204/Madhumitaghosh-/blob/main/output.jpg)
+![logo](https://github.com/Madhu-204/Madhu-204/blob/main/output.jpg)
 <h1 align="center">Hi 👋, I'm Madhumita Ghosh</h1>
 <h3 align="center">A passionate software developer from India</h3>
 
