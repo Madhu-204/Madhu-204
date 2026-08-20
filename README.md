@@ -45,8 +45,16 @@ I care about making AI *traceable* — every prediction should be explainable, a
   <a href="https://github.com/Madhu-204/TraceSky">
     <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Madhu-204&repo=TraceSky&theme=github_dark&hide_border=true" alt="TraceSky" />
   </a>
+  <a href="https://github.com/Madhu-204/Charaka-AI">
+    <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Madhu-204&repo=Charaka-AI&theme=github_dark&hide_border=true" alt="Charaka AI" />
+  </a>
+</p>
+<p align="center">
   <a href="https://github.com/Madhu-204/VOCASIGHT">
     <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Madhu-204&repo=VOCASIGHT&theme=github_dark&hide_border=true" alt="VocaSight" />
+  </a>
+  <a href="https://github.com/Madhu-204/Portfolioweb">
+    <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Madhu-204&repo=Portfolioweb&theme=github_dark&hide_border=true" alt="Portfolioweb" />
   </a>
 </p>
 
