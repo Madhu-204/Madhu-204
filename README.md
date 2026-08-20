@@ -43,10 +43,10 @@ I care about making AI *traceable* — every prediction should be explainable, a
 
 <p align="center">
   <a href="https://github.com/Madhu-204/TraceSky">
-    <img src="https://github-readme-stats-<YOUR-DOMAIN>.vercel.app/api/pin/?username=Madhu-204&repo=TraceSky&theme=github_dark&hide_border=true" alt="TraceSky" />
+    <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Madhu-204&repo=TraceSky&theme=github_dark&hide_border=true" alt="TraceSky" />
   </a>
   <a href="https://github.com/Madhu-204/VOCASIGHT">
-    <img src="https://github-readme-stats-<YOUR-DOMAIN>.vercel.app/api/pin/?username=Madhu-204&repo=VOCASIGHT&theme=github_dark&hide_border=true" alt="VocaSight" />
+    <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Madhu-204&repo=VOCASIGHT&theme=github_dark&hide_border=true" alt="VocaSight" />
   </a>
 </p>
 
@@ -55,12 +55,12 @@ I care about making AI *traceable* — every prediction should be explainable, a
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats-<YOUR-DOMAIN>.vercel.app/api?username=Madhu-204&show_icons=true&theme=github_dark&hide_border=true" width="48%" alt="GitHub Stats" />
-  <img src="https://streak-stats.demolab.com/?user=Madhu-204&theme=github-dark&hide_border=true" width="48%" alt="GitHub Streak" />
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=Madhu-204&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github" width="48%" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/streak?username=Madhu-204&theme=github_dark&hide_border=true" width="48%" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats-<YOUR-DOMAIN>.vercel.app/api/top-langs?username=Madhu-204&theme=github_dark&hide_border=true&layout=compact" width="40%" alt="Top Languages" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Madhu-204&theme=github_dark&hide_border=true&layout=compact&langs_count=8" width="40%" alt="Top Languages" />
 </p>
 
 <p align="center">
@@ -68,7 +68,7 @@ I care about making AI *traceable* — every prediction should be explainable, a
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Madhu-204&theme=darkhub&no-frame=true&margin-w=15&margin-h=15" alt="GitHub Trophies" />
+  <img src="https://raw.githubusercontent.com/Madhu-204/Madhu-204/output/snake-dark.svg" alt="Contribution Snake" />
 </p>
 
 ---
