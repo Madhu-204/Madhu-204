@@ -20,15 +20,7 @@ jobs:
           python-version: "3.x"
 
       - name: Generate contribution stats
-        run: |
-          echo "Current dir: $(pwd)"
-          echo "Listing files:"
-          ls -la
-          echo "Listing scripts:"
-          ls -la scripts/
-          python scripts/generate_contributions.py
-          echo "Listing dist after generation:"
-          ls -la dist/
+        run: python scripts/generate_contributions.py
 
       - uses: Platane/snk@v3
         with:
