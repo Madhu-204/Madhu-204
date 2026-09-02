@@ -15,19 +15,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate contribution stats
+        run: |
+          echo "Current dir: $(pwd)"
+          echo "Listing files:"
+          ls -la
+          echo "Listing scripts:"
+          ls -la scripts/
+          python scripts/generate_contributions.py
+          echo "Listing dist after generation:"
+          ls -la dist/
+
       - uses: Platane/snk@v3
         with:
           github_user_name: Madhu-204
           outputs: |
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Generate contribution stats
-        run: python scripts/generate_contributions.py
 
       - uses: peaceiris/actions-gh-pages@v4
         with:
