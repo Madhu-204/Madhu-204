@@ -1,54 +1,45 @@
 import os
 import json
+import re
 import urllib.request
-import urllib.error
 from datetime import datetime, timedelta
-import math
 
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 USERNAME = os.environ.get("GITHUB_USER", "Madhu-204")
-
-GRAPHQL_URL = "https://api.github.com/graphql"
-
-QUERY = """
-query($login: String!) {
-  user(login: $login) {
-    contributionsCollection {
-      contributionCalendar {
-        totalContributions
-        weeks {
-          contributionDays {
-            contributionCount
-            date
-          }
-        }
-      }
-    }
-  }
-}
-"""
 
 
 def fetch_contributions():
-    payload = json.dumps({"query": QUERY, "variables": {"login": USERNAME}}).encode("utf-8")
-    req = urllib.request.Request(
-        GRAPHQL_URL,
-        data=payload,
-        headers={
-            "Authorization": f"bearer {GITHUB_TOKEN}",
-            "Content-Type": "application/json",
-            "User-Agent": "GitHub-Stats-Generator",
-        },
-    )
+    """Fetch contribution calendar by scraping the GitHub profile page (like Platane/snk)."""
+    url = f"https://github.com/users/{USERNAME}/contributions"
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
+        html = resp.read().decode("utf-8")
 
-    cal = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
-    total = cal["totalContributions"]
+    total = 0
     days = []
-    for week in cal["weeks"]:
-        for day in week["contributionDays"]:
-            days.append({"count": day["contributionCount"], "date": day["date"]})
+
+    year_total_match = re.search(r'<h2[^>]*>\s*(\d+)\s*\n\s*contributions', html)
+    if year_total_match:
+        total = int(year_total_match.group(1))
+
+    pattern = re.compile(
+        r'data-date="(\d{4}-\d{2}-\d{2})"[^>]*data-level="([0-9]+)"[^>]*'
+        r'class="ContributionCalendar-day"></td>\s*<tool-tip[^>]*>([^<]*)</tool-tip>',
+        re.DOTALL,
+    )
+    for m in pattern.finditer(html):
+        date = m.group(1)
+        level = int(m.group(2))
+        tooltip = m.group(3).strip()
+        if tooltip.startswith("No contributions"):
+            count = 0
+        else:
+            count_match = re.match(r"(\d+)\s+contributions?", tooltip)
+            count = int(count_match.group(1)) if count_match else 0
+        days.append({"count": count, "date": date, "level": level})
+
+    if not total and days:
+        total = sum(d["count"] for d in days)
+
     return total, days
 
 
@@ -78,12 +69,6 @@ BOTTOM_PAD = 8
 
 
 def generate_activity_svg(total, days):
-    if not days:
-        return ""
-
-    first_date = datetime.strptime(days[0]["date"], "%Y-%m-%d")
-    start_weekday = first_date.weekday()
-
     date_map = {d["date"]: d["count"] for d in days}
 
     today = datetime.utcnow().date()
@@ -109,7 +94,6 @@ def generate_activity_svg(total, days):
     svg_h = TOP_PAD + 7 * PITCH + BOTTOM_PAD
 
     rects = []
-
     month_positions = {}
     for ci, (week_start, week) in enumerate(weeks):
         for ri, cnt in enumerate(week):
@@ -160,7 +144,6 @@ def generate_streak_svg(total, days):
         date_counts[d["date"]] = d["count"]
 
     today = datetime.utcnow().date()
-    today_str = today.strftime("%Y-%m-%d")
 
     def has_contributed(dt_str):
         return date_counts.get(dt_str, 0) > 0

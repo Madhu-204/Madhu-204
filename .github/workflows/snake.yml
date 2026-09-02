@@ -28,8 +28,6 @@ jobs:
 
       - name: Generate contribution stats
         run: python scripts/generate_contributions.py
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: peaceiris/actions-gh-pages@v4
         with:
