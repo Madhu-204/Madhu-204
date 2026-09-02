@@ -64,7 +64,7 @@ I care about making AI *traceable* — every prediction should be explainable, a
 
 <p align="center">
   <img src="https://github-readme-stats-fast.vercel.app/api?username=Madhu-204&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github" width="48%" alt="GitHub Stats" />
-  <img src="https://github-readme-stats-fast.vercel.app/api/streak?username=Madhu-204&theme=github_dark&hide_border=true" width="48%" alt="GitHub Streak" />
+  <img src="https://raw.githubusercontent.com/Madhu-204/Madhu-204/output/streak.svg" width="48%" alt="GitHub Streak" />
 </p>
 
 <p align="center">
@@ -72,7 +72,7 @@ I care about making AI *traceable* — every prediction should be explainable, a
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Madhu-204&theme=github-dark&hide_border=true" width="95%" alt="Contribution Graph" />
+  <img src="https://raw.githubusercontent.com/Madhu-204/Madhu-204/output/activity.svg" width="95%" alt="Contribution Graph" />
 </p>
 
 <p align="center">
