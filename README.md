@@ -72,10 +72,6 @@ I care about making AI *traceable* — every prediction should be explainable, a
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Madhu-204/Madhu-204/output/activity.svg" width="95%" alt="Contribution Graph" />
-</p>
-
-<p align="center">
   <img src="https://raw.githubusercontent.com/Madhu-204/Madhu-204/output/snake-dark.svg" alt="Contribution Snake" />
 </p>
 
