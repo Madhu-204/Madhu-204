@@ -7,7 +7,7 @@
   <rect width="480" height="130" rx="6" ry="6" fill="#0d1117"/>
   <text x="240.0" y="18" class="title" text-anchor="middle">GitHub Streak</text>
   <g transform="translate(0, 20)">
-    <text x="80" y="30" class="num" text-anchor="middle">3</text>
+    <text x="80" y="30" class="num" text-anchor="middle">0</text>
     <text x="80" y="52" class="label" text-anchor="middle">Current Streak</text>
   </g>
   <g transform="translate(160, 20)">
