@@ -15,7 +15,7 @@
     <text x="80" y="52" class="label" text-anchor="middle">Longest Streak</text>
   </g>
   <g transform="translate(320, 20)">
-    <text x="80" y="30" class="num" text-anchor="middle">103</text>
+    <text x="80" y="30" class="num" text-anchor="middle">105</text>
     <text x="80" y="52" class="label" text-anchor="middle">Total Contributions</text>
   </g>
 </svg>
